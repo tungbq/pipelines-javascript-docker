@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: tungbqpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tungbqpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: tungbqpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: tungbqpipelinesjavascriptdocker 
+          image: tungbqacr.azurecr.io/tungbqpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
